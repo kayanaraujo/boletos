@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head lang="br">
+    <meta charset="UTF-8">
+    <title>Boleto HSBC</title>
+    <style>
+        @media screen, print{
+            #boleto{
+                width: 665px;
+                font-size: 12px;
+            }
+            #instrucoes ul {
+                padding: 10px;
+            }
+            #instrucoes .titulo{
+                text-align: center;
+            }
+            .linha-pontilhada{
+                width: 100%;
+                border-bottom: 1px dashed #000;
+            }
+            .linha-pontilhada span{
+                float: right;
+            }
+            .hack {
+                display: block;
+                clear: both;
+            }
+            /*Leiaute do Boleto*/
+            .logo {
+                width: 150px;
+                height: 40px;
+                content: url('imagens/logohsbc.jpg');
+                background: url('imagens/logohsbc.jpg');
+                background-repeat: no-repeat;
+                border-bottom: 1px solid #000;
+                float: left;
+            }
+            .cod-banco {
+                height: 20px;
+                font-size: 20px;
+                border-left: 2px solid #000;
+                border-right: 2px solid #000;
+                border-bottom: 1px solid #000;
+                float: left;
+                margin-top: 20px;
+            }
+            .linha-digitavel {
+                width: 462px;
+                height: 20px;
+                font-size: 16px;
+                text-align: right;
+                border-bottom: 1px solid #000;
+                float: left;
+                margin-top: 20px;
+            }
+            .texto-a-direita {
+                text-align: right;
+            }
+            .texto-a-esquerda {
+                text-align: left;
+            }
+            .cell{
+                border-left: 1px solid #000;
+                border-top: 1px solid #000;
+                height: 30px;
+                font-size: 12px;
+                float: left;
+                font-weight: bold;
+                padding-left: 5px;
+            }
+            .cell label{
+                display: block;
+                height: 18px;
+                font-size: 10px;
+                text-align: left;
+                font-weight: normal;
+            }
+        }
+    </style>
+</head>
+<body id="boleto">
+<div id="instrucoes">
+    <p class="titulo">
+        Instruções de Impressão
+    </p>
+    <ul>
+        <li>Imprima em impressora jato de tinta (ink jet) ou laser em qualidade normal ou alta (Não use modo econômico).</li>
+        <li>Utilize folha A4 (210 x 297 mm) ou Carta (216 x 279 mm) e margens mínimas à esquerda e à direita do formulário.</li>
+        <li>Corte na linha indicada. Não rasure, risque, fure ou dobre a região onde se encontra o código de barras.</li>
+        <li>Caso não apareça o código de barras no final, clique em F5 para atualizar esta tela.</li>
+        <li>Caso tenha problemas ao imprimir, copie a seqüencia numérica abaixo e pague no caixa eletrônico ou no internet banking.</li>
+    </ul>
+    <p>
+        Linha Digitável: <span>10498.00004 00002.915650 00000.013870 8 64750000010000</span><br />
+        Valor: <span>R$ 100,00</span>
+    </p>
+</div>
+<div class="linha-pontilhada">
+    <span>Recibo do Sacado</span>
+</div>
+<br class="hack">
+<!-- Inicio do recibo do sacado -->
+<div class="logo"></div>
+<div class="cod-banco">399-9</div>
+<div class="linha-digitavel">10498.00004 00002.915650 00000.013870 8 64750000010000</div>
+<div class="hack"></div>
+<div class="cell" style="width: 250px;">
+    <label>Cedente</label>
+    Pedro Kayan Sampaio
+</div>
+<div class="cell" style="width: 155px">
+    <label>Agência/Código do Cedente</label>
+    0000 / 00000000000-0
+</div>
+<div class="cell" style="width: 45px">
+    <label>Espécie</label>
+    R$
+</div>
+<div class="cell" style="width: 60px">
+    <label>Quantidade</label>
+    &nbsp;
+</div>
+<div class="cell texto-a-direita" style="width: 123px">
+    <label>Nosso Número</label>
+    0000000001-7
+</div>
+<div class="cell" style="width: 185px">
+    <label>Número do Documento</label>
+    1
+</div>
+<div class="cell" style="width: 133px">
+    <label>CPF/CNPJ</label>
+    000.111.222-33
+</div>
+<div class="cell" style="width: 132px">
+    <label>Vencimento</label>
+    28/06/2015
+</div>
+<div class="cell texto-a-direita" style="width: 189px">
+    <label>Valor do Documento</label>
+    100,00
+</div>
+<div class="cell" style="width: 111px">
+    <label>(-) Desconto/Abatimento</label>
+    &nbsp;
+</div>
+<div class="cell" style="width: 111px">
+    <label>(-) Outras Deduções</label>
+    &nbsp;
+</div>
+<div class="cell" style="width: 111px">
+    <label>(+) Mora/Multa</label>
+    &nbsp;
+</div>
+<div class="cell" style="width: 111px">
+    <label>(+) Outros Acrésimos</label>
+    &nbsp;
+</div>
+<div class="cell texto-a-direita" style="width: 189px">
+    <label>(=) Valor Cobrado</label>
+    &nbsp;
+</div>
+<div class="cell" style="width: 657px">
+    <label>Sacado</label>
+    DevFSA
+</div>
+<div class="cell" style="width: 657px; height: 100px; border-left: 0px;">
+    <label>Demonstrativo <span style="float: right">Autenticação mecânica</span></label>
+    Criação de Boleto.<br />
+    Tarifa bancária: R$ 2,50 <br>
+    Autor: Kayan Sampaio
+</div>
+<br class="hack">
+<!-- Fim do Recibo do Sacado-->
+
+<div class="linha-pontilhada">
+    <span>Corte na linha pontilhada</span>
+</div>
+<br class="hack">
+
+<!--Inicio do recibo do cedente-->
+<div class="logo"></div>
+<div class="cod-banco">399-9</div>
+<div class="linha-digitavel">10498.00004 00002.915650 00000.013870 8 64750000010000</div>
+<div class="hack"></div>
+<div class="cell" style="width: 462px">
+    <label>Local de Pagamento</label>
+    Pagável em qualquer banco até o vencimento.
+</div>
+<div class="cell texto-a-direita" style="width: 189px">
+    <label>Vencimento</label>
+    28/06/2015
+</div>
+<div class="cell" style="width: 462px">
+    <label>Cedente</label>
+    Pedro Kayan Sampaio
+</div>
+<div class="cell texto-a-direita" style="width: 189px">
+    <label>Agência/Código do Cedente</label>
+    0000 / 00000000000-0
+</div>
+<div class="cell" style="width: 120px">
+    <label>Data do Documento</label>
+    28/06/2015
+</div>
+<div class="cell" style="width: 120px">
+    <label>Número do Documento</label>
+    1
+</div>
+<div class="cell" style="width: 60px">
+    <label>Espécie Doc.</label>
+    &nbsp;
+</div>
+<div class="cell" style="width: 40px">
+    <label>Aceite</label>
+    &nbsp;
+</div>
+<div class="cell" style="width: 98px">
+    <label>Data Processamento</label>
+    28/06/2015
+</div>
+<div class="cell texto-a-direita" style="width: 189px">
+    <label>Nosso Número</label>
+    0000000001-7
+</div>
+<div class="cell" style="width: 120px">
+    <label>Uso do banco</label>
+    &nbsp;
+</div>
+<div class="cell" style="width: 74px">
+    <label>Carteira</label>
+    &nbsp;
+</div>
+<div class="cell" style="width: 40px">
+    <label>Espécie</label>
+    R$
+</div>
+<div class="cell" style="width: 106px">
+    <label>Quantidade</label>
+    &nbsp;
+</div>
+<div class="cell" style="width: 98px">
+    <label>Valor do Documento</label>
+    &nbsp;
+</div>
+<div class="cell texto-a-direita" style="width: 189px">
+    <label>(=) Valor do Documento</label>
+    100,00
+</div>
+<div class="cell" style="width: 462px; height: 154px;">
+    <label>Instruções (Texto de responsabilidade do Cedente)</label>
+    &nbsp;
+</div>
+<div class="cell texto-a-direita" style="width: 189px">
+    <label>(-) Desconto/Abatimentos</label>
+    &nbsp;
+</div>
+<div class="cell texto-a-direita" style="width: 189px">
+    <label>(-) Outras Deduções</label>
+    &nbsp;
+</div>
+<div class="cell texto-a-direita" style="width: 189px">
+    <label>(+) Mora / Multa</label>
+    &nbsp;
+</div>
+<div class="cell texto-a-direita" style="width: 189px">
+    <label>(+) Outros Acréscimos</label>
+    &nbsp;
+</div>
+<div class="cell texto-a-direita" style="width: 189px">
+    <label>(=) Valor Cobrado</label>
+    &nbsp;
+</div>
+<div class="cell" style="width: 657px; height: 60px;">
+    <label>Sacado</label>
+    DevFSA,<br>
+    Endereço: Rua A, numero 12 - Feira de Santana / Bahia<br>
+    Centro, CEP: 44100-000
+</div>
+<div class="cell" style="width: 657px; height: 80px;">
+    <label>Sacador/Avalista <span style="float: right">Autenticação mecânica</span></label>
+    <!-- Esta é apenas uma ilustração do código de barras. tem que ser substituido pelo que o seu sistema irá gerar! -->
+    <img src="imagens/mod-boleto10.jpg" />
+</div>
+<br class="hack">
+<div class="linha-pontilhada">
+    <span>Corte na linha pontilhada</span>
+</div>
+<!--Final do recibo do cedente-->
+
+</body>
+</html>
